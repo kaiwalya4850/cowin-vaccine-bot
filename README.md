@@ -1,6 +1,6 @@
 # Cowin Bot
 
-My own bot on telegram could be found by this username: @CoWINchecker_bot
+My own bot on telegram is live by this username: @CoWINchecker_bot
 
 
 A telegram bot that shows a number of available vaccines in vaccination centers near you. 
