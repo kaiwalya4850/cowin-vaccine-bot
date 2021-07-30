@@ -25,7 +25,15 @@ Run it like
 ```python
 python bot.py
 ```
-
+You can even study the time at which the slots open in your city and book according to pattern. To get the results run:
+```python
+python nodb.py
+```
+To keep all track on Google Firestore, run:
+(Make sure you add .json file from Firestore)
+```python
+python checker.py
+```
 ## Future updates
 Deployment on Heroku
 
