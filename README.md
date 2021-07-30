@@ -1,6 +1,6 @@
 # Cowin Bot
 
-My own bot on telegram is live by this username: @CoWINchecker_bot
+My own bot on telegram is live by this username: @CoWINchecker_bot (inactive now!)
 
 
 A telegram bot that shows a number of available vaccines in vaccination centers near you. 
@@ -27,10 +27,6 @@ python bot.py
 ```
 
 ## Future updates
-Finding a way to so that API works all the time
-
-Adding functionality that will send a message to the user, every 30 mins, about the availability of vaccines. 
-
 Deployment on Heroku
 
 Until then... Stay home, stay safe!
