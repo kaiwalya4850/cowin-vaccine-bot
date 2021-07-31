@@ -18,6 +18,7 @@ while(1):
     date_list = [base + datetime.timedelta(days=x) for x in range(numdays)]
     date_str = [x.strftime("%d-%m-%Y") for x in date_list]
     URL = "https://cdn-api.co-vin.in/api/v2/appointment/sessions/public/calendarByDistrict?district_id={}&date={}".format(DIST_ID, date_str[0])
+    print(URL)
     headers = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36'}
     response = requests.get(URL, headers=headers)
     if response.ok:
@@ -27,17 +28,22 @@ while(1):
             #print("Available on: {}".format(date_str[0]))
             if(print_flag=='y' or print_flag=='Y'):
                 for center in resp_json["centers"]:
+                    name = center["name"]
+                    print(name)
                     for session in center["sessions"]:
                         if session["min_age_limit"] <= age:
-                            print("\t", center["name"])
-                            print("\t", center["block_name"])
-                            print("\t Price: ", center["fee_type"])
-                            print("\t Available Capacity: ", session["available_capacity"])
-                            if((session["available_capacity"])>0):
+                            #print("\t", center["name"])
+                            #print("\t", center["block_name"])
+                            #print("\t Price: ", center["fee_type"])
+                            #print("\t Available Capacity: ", session)
+                            if((session["available_capacity_dose2"])>0):
                                 y = True
+                                print("Name and capacity is: ",name,session["available_capacity_dose2"])
                                 #doc.set({base:z})
                             else:
-                                print("No",base)
+                                new = 1
+                                #print("No",base)
+                                
 
 
 
